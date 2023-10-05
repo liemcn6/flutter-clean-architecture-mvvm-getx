@@ -81,7 +81,7 @@ class LoginScreen extends GetView<LoginController> {
           child: Container(
             height: 20,
             width: 20,
-            margin: const EdgeInsets.fromLTRB(13, 11, 13, 11),
+            margin: const EdgeInsets.fromLTRB(0, 11, 13, 11),
             child: SvgPicture.asset(
               controller.hidePassword.value == true ? SvgPath.svgShowPassword : SvgPath.svgHidePassword,
             ),

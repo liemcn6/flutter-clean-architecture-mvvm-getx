@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fluttertemplate/presentation/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 import '/app/utils/toast_util.dart';
@@ -38,7 +39,10 @@ class LoginController extends GetxController {
     } else if (Platform.isIOS) {
       platform = 1;
     }
-    final res = await _repo.login(LoginRequest(userName: userController.text, password: passwordController.text, platform: platform));
+    final res = await _repo.login(LoginRequest(
+        userName: userController.text,
+        password: passwordController.text,
+        platform: platform));
     Log.i(res.message);
     if (res.code == 0) {
       // Get.offNamedUntil(Routes.home, (route) => false);
@@ -49,7 +53,8 @@ class LoginController extends GetxController {
   }
 
   toRegister() {
-    // Get.toNamed(Routes.register);
+    //Get.toNamed(Routes.register);
+     Log.i('Click Login ${userController.text}/${passwordController.text}');
   }
 
   toForgotPassword() {

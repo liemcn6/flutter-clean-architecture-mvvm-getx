@@ -12,4 +12,5 @@ class SvgPath {
   static const svgHidePassword = '$_folderPath/svg_hide_password.svg';
   static const svgShowPassword = '$_folderPath/svg_show_password.svg';
   static const svgBack = '$_folderPath/svg_back_arrow.svg';
+  static const svgClear = '$_folderPath/svg_clear.svg';
 }
